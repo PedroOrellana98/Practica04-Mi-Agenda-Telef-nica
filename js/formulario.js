@@ -74,51 +74,6 @@ function validarApellido(){
     }
 }
 
-function validarDireccion(){
-    direccion = document.getElementById("txtDireccion").value;
-
-    if (direccion.length > 1) {
-        document.getElementById('txtDireccion').style.color = "black";
-        document.getElementById('mensajeDireccion').innerHTML = "<br hidden>"
-        contD = 1;
-    }else{
-        document.getElementById('txtDireccion').style.color = "red";
-        document.getElementById('mensajeDireccion').innerHTML = "<br>Direccion invalida"
-        contD = 0;
-    }
-}
-
-function validarTelefono(){
-    telefono = document.getElementById("txtTelefono").value;
-
-    if (isNaN(telefono) || telefono.length > 10) {
-        document.getElementById('txtTelefono').style.color = "red";
-        document.getElementById('mensajeTelefono').innerHTML = "<br>Telefono invalido"
-        contT = 0;
-    }else{
-        document.getElementById('txtTelefono').style.color = "black";
-        document.getElementById('mensajeTelefono').innerHTML = "<br hidden>"
-        contT = 1;
-    }
-
-}
-
-function validarFecha(){
-    array = document.getElementById('txtFecha').value.split('/');
-    fecha = new Date(array[2], array[1], array[0]);
-    
-    if (array.length == 3 && fecha && array[0] == fecha.getDate() && array[1] == fecha.getMonth() && array[2] == fecha.getFullYear()) {
-        
-        document.getElementById('txtFecha').style.color = "black";
-        document.getElementById('mensajeFecha').innerHTML = "<br hidden>"
-        contF = 1;
-    } else {
-        document.getElementById('txtFecha').style.color = "red";
-        document.getElementById('mensajeFecha').innerHTML = "<br>Fecha invalida formato dd/mm/yyyy"
-        contF = 0;
-    }
-}
-
 function validarCorreo(){
     array = document.getElementById('txtCorreo').value.split('@');
 
