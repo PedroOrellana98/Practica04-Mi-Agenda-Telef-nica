@@ -1,0 +1,163 @@
+body{
+    background-color: white;
+}
+
+.navegacion {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.lista > li {
+    border-radius: 5%;
+    border-width: 1px;
+    border-style: solid;
+    display: block;
+    float: left;
+    height: 20px;
+    background-color: silver;
+}
+
+.lista > li > a {
+    width: 150px;
+    display: block;
+    float: left;
+    text-align: center;
+    color: white;
+    background-color:silver;
+}
+
+#imagenValoracion {
+    border-radius: 30%;
+    width: 60px;
+    height: 50px;
+}
+
+#sectionHardware {
+    float: left;
+    margin-bottom: 20px;
+}
+
+.articleHardware {
+    float: left;
+    width: 45%;
+    margin-left: 5%;
+    height: 349px;
+}
+
+.asideVideo {
+    float: left;
+    width: 40%;
+    height: 349px;
+    margin-left: 1%;
+}
+
+#boton1 {
+    background-color: white;
+    float: left;
+    margin-left: 20%;
+    width: 15%;
+}
+
+#boton2 {
+    background-color: white;
+    float: left;
+    margin-left: 20%;
+    width: 15%;
+}
+
+#boton3 {
+    background-color: white;
+    float: left;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 20px;
+    width: 10%;
+}
+
+#video {
+    width: 100%;
+    height: 100%;   
+}
+
+h2 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+a:visited {
+  color: green;  
+}
+
+hr.separator {
+    border-top: 3px solid black;
+    background-color: black;
+    height: 10px;
+}
+
+#sectionNoticias {
+    float: left;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.articleNoticia {
+    float: left;
+    margin-left: 2%;
+    margin-left: 2%;
+    width: 14%;
+    height: 75px;
+    border: solid;
+    border-color: black;
+}
+
+#sectionValoracion {
+    float: left;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.articleValoracion {
+    float: left;
+    width: 30%;
+}
+
+.asideValoracion {
+    float: left;
+    width: 60%;
+}
+
+.divImagen {
+    float: left;   
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.estrellas {
+    margin-left: 22%;
+    margin-right: 30%;
+	font-size: 0;
+	display: inline-block;
+}
+.estrellas a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 32px;
+	font-size: 2rem;
+	color: #888;
+}
+
+.estrellas a {
+	color: gold;
+}
+
+footer {
+    background-color: whitesmoke !important;
+}

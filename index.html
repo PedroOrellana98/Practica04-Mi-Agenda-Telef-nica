@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <title>
+        MI PRIMERA PAGINA WEB
+    </title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="PC,Hardware">
+    <link href="css/general.css" rel="stylesheet" type="text/css"/>
+    <link href="css/principal.css" rel="stylesheet" type="text/css"/>
+    <header>
+        <img id="tituloImangen" src="images/cuenta.jpg" alt="cuenta">
+        <input id="tituloTexto" type="search" placeholder="Buscar">
+        <a href="php/public/vista/crear_cuenta.html"><img id="imagenPerfil" src="images/perfil.png" alt="perfil"></a> 
+        <a href="php/public/vista/login.html"><img id="imagenCorreo" src="images/correo.png" alt="correo"></a>
+    </header>
+    <nav class = "navegacion">
+        <ul class = "lista">
+            <li><a href=docs/procesador.html>Procesador</a></li>
+            <li><a href=docs/placa-madre.html>Placa madre</a></li>
+            <li><a href=docs/ram.html>Ram</a></li>
+            <li><a href=docs/almacenamiento.html>Almacenamiento</a></li>
+            <li><a href=docs/fuente-poder.html>Fuente de Poder</a></li>
+            <li><a href=docs/tarjeta-video.html>Tarjeta de Video</a></li>
+            <li><a href=docs/perifericos.html>Perifericos</a></li>
+            <li><a href=docs/cuenta.html>Contacto</a></li>
+            </ul>
+    </nav>
+    <section id = "sectionHardware">
+        <h1 hidden> Introduccion al Hardware </h1>
+        <article class = "articleHardware">
+            <h2> ¿Que es el hardware? </h2>
+            <p> Hardware es la parte física de un ordenador o sistema informático. Está formado por los componentes eléctricos, electrónicos, electromecánicos y mecánicos, tales como circuitos de cables y luz, placas, memorias, discos duros, dispositivos periféricos y cualquier otro material en estado físico que sea necesario para hacer que el equipo funcione. </p>
+            <input id= "boton1" type="submit" value="Me gusta">
+            <input id= "boton2" type="submit" value="No me gusta">
+        </article>
+        <aside class="asideVideo">
+            <iframe id="video"
+            src="https://www.youtube.com/embed/bnct-W1jpOo"></iframe> 
+        </aside>
+    </section>
+    <section id =  "sectionNoticias">
+        <h1> NOTICIAS </h1>
+        <article class = "articleNoticia">
+            <h3 hidden>AMD</h3>
+            <cite>AMD dona 15 millones de dolares en hardware por el COVID-19</cite>
+        </article>
+        <article class = "articleNoticia">
+            <h3 hidden>IBM</h3>
+            <cite>IBM pone herramientas con Inteligencia Artificial a disposición de investigadores del COVID-19</cite>
+        </article>
+        <article class = "articleNoticia">
+            <h3 hidden>GOLBAL</h3>
+            <cite>La tecnología y el análisis de datos al servicio de la lucha contra el COVID-19</cite>
+        </article>
+        <article class = "articleNoticia">
+            <h3 hidden>ASUS</h3>
+            <cite>Metal líquido, la nueva locura de los portátiles de Asus</cite>
+        </article>
+        <article class = "articleNoticia">
+            <h3 hidden>NVIDIA</h3>
+            <cite>NVIDIA añade cancelación activa del ruido por software en sus gráficas RTX</cite>
+        </article>
+        <article class = "articleNoticia">
+            <h3 hidden>INTEL</h3>
+            <cite>Intel acumula vulnerabilidades, sus chipsets ahora no son seguros</cite>
+        </article>
+        <input id= "boton3" type="submit" value="Actualizar">
+    </section>
+    <section id = "sectionValoracion">
+        <h1> VALORACIONES </h1>
+        <article class="articleValoracion">
+            <h2 hidden> Valoracion </h2>
+            <div class= "divImagen">
+                <img id="imagenValoracion" src="images/feliz.jpg" alt="perfil"> 
+            </div>
+            <div class="estrellas">
+                <a data-value="1">&#9733;</a>
+                <a data-value="2">&#9733;</a>
+                <a data-value="3">&#9733;</a>
+                <a data-value="4">&#9733;</a>
+                <a data-value="5">&#9733;</a>
+            </div>
+        </article>
+        <aside class="asideValoracion">
+            <p><i>"El diseño se ajusta totalmente a lo que buscamos. Una imagen atractiva y limpia en un diseño funcional, cómodo e intuitivo. Todo con una atención personalizada gracias a la cual se han podido entender las necesidades de mi despacho."</i></p>
+        </aside>
+    </section>
+    <footer>
+        <div id = "footerInfo">
+            <div id = "divImage1">
+                <img id="imagenFacebook" src="images/facebook.png" alt="facebook">
+                <img id="imagenInstagram" src="images/instagram.png" alt="instagram">
+            </div>
+            <div id = "divImage2">
+                <img id="imagenContacto" src="images/contacto.png" alt="contacto">
+            </div>
+            <div id = "divCopy">
+                &copy; Todos los derechos reservados
+            </div>
+        </div>
+        <div id = "footerContacto">
+            <form>
+                <fieldset>
+                    <legend> Quien Soy </legend>
+                        <label class="labelContacto"> PEDRO JOSE ORELLANA </label>
+                        <label class="labelContacto"> Correo: <a href="mailto:porellanaj@est.ups.edu.ec"> 
+                        porellanaj@est.ups.edu.ec </a> </label>
+                        <label class="labelContacto"> Telefono: <a href="tel:+59398550859"> 
+                            0998550859 </a> </label>
+                            <label class="labelContacto"> UNIVERSIDAD POLITECNICA SALESIANA </label>
+                </fieldset>
+            </form>
+        </div>
+        <div id = "footerLocalizacion">
+            <iframe id = "localizacion"
+            src="https://maps.google.com/?ll=-2.886850,-78.989353&z=16&output=embed"></iframe>
+        </div>
+    </footer>
+</html>

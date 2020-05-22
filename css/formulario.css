@@ -1,0 +1,39 @@
+.sectionContenido {
+    float: left;
+    margin-top: 30px;
+    width: 60%;
+    margin-left: 4%;
+    margin-bottom: 10px;
+}
+
+body{
+    background-image: url(https://img.freepik.com/vector-gratis/diseno-fondo-bokeh-borrosa-suave_1017-14457.jpg?size=626&ext=jpg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+
+ul > li > a, #titulo {
+    color: black !important;
+}
+
+section form fieldset input {
+    width: 200px;
+}
+
+#divFormulario {
+    margin-top: 10px;   
+    margin-left: 25%;
+    width: 40%;
+}
+
+#botonContacto {
+    margin-top: 30px;
+    width: 80px;
+    margin-left: 50%;
+    text-align: center;
+}
+
+span {
+    color: red;
+}
+

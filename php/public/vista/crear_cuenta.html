@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <title>
+        Formulario
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Cuenta, Formulario" />
+    <link href= "../../../css/general.css" rel="stylesheet" type="text/css"/>
+    <link href= "../../../css/formulario.css" rel="stylesheet" type="text/css"/>
+    <link href= "../../../css/principal.css" rel="stylesheet" type="text/css"/>
+    <script src = "../../../js/formulario.js"></script>
+    <body>
+    <header>
+        <h1 id = "titulo"> FORMULARIO </h1>
+        <img id="tituloImangen" src="../../../images/cuenta.jpg" alt="cuenta">
+        <input id ="tituloTexto" type="search" placeholder="Buscar">
+        <img id="imagenPerfil" src="../../../images/perfil.jpg" alt="perfil"> 
+    </header>
+    <div class = "divNav">
+        <nav class="navegar">
+            <ul class = "list">
+                <li><a href=../../../index.html>Principal </a></li>
+                <li><a href=#footerInfo>Contacto </a></li>
+            </ul>
+        </nav>
+        </div>
+    <section class="sectionContenido">
+        <h2 hidden> CONTENIDO </h2>
+        <form>
+            <fieldset>
+                    <legend> FORMULARIO </legend>
+                    <label class="labelContacto"> CEDULA* </label><br>
+                    <input type="text" id="txtCedula" name="cedula" placeholder="Ingrese su cedula" onchange="validarCedula()">
+                    <span id="mensajeCedula"></span><br>
+                    <label class="labelContacto"> NOMBRES* </label><br>
+                    <input type="text" id="txtNombre" name="nombre" placeholder="Ingrese sus nombres" onkeydown="validarNombre()">
+                    <span id="mensajeNombre"></span><br>
+                    <label class="labelContacto"> APELLIDOS* </label><br>
+                    <input type="text" id="txtApellido" name="apellido" placeholder="Ingrese sus apellidos" onkeydown="validarApellido()">
+                    <span id="mensajeApellido"></span><br>
+                    <label class="labelContacto"> DIRECCION* </label><br>
+                    <input type="text" id="txtDireccion" name="direccion" placeholder="Ingrese su direccion" onkeydown="validarDireccion()">
+                    <span id="mensajeDireccion"></span><br>
+                    <label class="labelContacto"> TELEFONO* </label><br>
+                    <input type="text" id="txtTelefono" name="telefono" placeholder="Ingrese su telefono" onkeyup="validarTelefono()">
+                    <span id="mensajeTelefono"></span><br>
+                    <label class="labelContacto"> FECHA NACIMIENTO* </label><br>
+                    <input type="text" id="txtFecha" name="fecha" placeholder="Formato dd/mm/yyyy" onkeyup="validarFecha()">
+                    <span id="mensajeFecha"></span><br>
+                    <label class="labelContacto"> CORREO ELECTRONICO* </label><br>
+                    <input type="text" id="txtCorreo" name="correo" placeholder="Ingrese su correo" onkeyup="validarCorreo()">
+                    <span id="mensajeCorreo"></span><br>
+                    <label class="labelContacto"> CONTRASEÑA* </label><br>
+                    <input type="password" id="txtContra" name="contraseña" placeholder="Ingrese su contraseña" onchange="validarContraseña()">
+                    <span id="mensajeContra"></span><br>
+                    <input type = "button" id = "botonContacto"  value="Validar" onclick="validar();">
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div id = "footerInfo">
+            <div id = "divImage1">
+                <img id="imagenFacebook" src="../../../images/facebook.png" alt="facebook">
+                <img id="imagenInstagram" src="../../../images/instagram.png" alt="instagram">
+            </div>
+            <div id = "divImage2">
+                <img id="imagenContacto" src="../../../images/contacto.png" alt="contacto">
+            </div>
+            <div id = "divCopy">
+                &copy; Todos los derechos reservados
+            </div>
+        </div>
+        <div id = "footerContacto">
+            <form>
+                <fieldset>
+                    <legend> Quien Soy </legend>
+                        <label class="labelContacto"> PEDRO JOSE ORELLANA </label>
+                        <label class="labelContacto"> Correo: <a href="mailto:porellanaj@est.ups.edu.ec"> 
+                        porellanaj@est.ups.edu.ec </a> </label>
+                        <label class="labelContacto"> Telefono: <a href="tel:+59398550859"> 
+                            0998550859 </a> </label>
+                            <label class="labelContacto"> UNIVERSIDAD POLITECNICA SALESIANA </label>
+                </fieldset>
+            </form>
+        </div>
+        <div id = "footerLocalizacion">
+            <iframe id = "localizacion"
+            src="https://maps.google.com/?ll=-2.886850,-78.989353&z=16&output=embed"></iframe>
+        </div>
+    </footer>
+    </body>   
+</html>
