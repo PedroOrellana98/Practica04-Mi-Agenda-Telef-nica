@@ -1,8 +1,5 @@
 var contN;
 var contA;
-var contD;
-var contT;
-var contF;
 var contC;
 var contCO;
 var contI;
@@ -139,12 +136,10 @@ function validarContraseña(){
 
 function validar(){
 
-    sum = contN+contA+contT+contF+contC+contCO+contI+contD;
+    sum = contN+contA+contC+contCO+contI;
     cedula = document.getElementById("txtCedula").value;
     nombre = document.getElementById("txtNombre").value;
     apellido = document.getElementById("txtApellido").value;
-    direccion = document.getElementById("txtDireccion").value;
-    fecha = document.getElementById("txtFecha").value;
     correo = document.getElementById("txtCorreo").value;
     contra = document.getElementById("txtContra").value;
 
@@ -157,12 +152,6 @@ function validar(){
     if (apellido.length < 1) {
         alert("Campo Apellidos vacio");
     }
-    if (direccion.length < 1) {
-        alert("Campo Direccion vacio");
-    }
-    if (fecha.length < 1) {
-        alert("Campo Fecha vacio");
-    }
     if (correo.length < 1) {
         alert("Campo Correo vacio");
     }
@@ -170,11 +159,13 @@ function validar(){
         alert("Campo Contraseña vacio");
     }
 
-    if (sum == 8) {
-        location.href='../index.php';
+    if (sum == 5) {
+        boton = document.getElementById("botonContacto");
+        boton1 = document.getElementById("botonContacto1");
+        boton1.disabled = false
     }else{
         alert("Revise sus campos");
-        location.href='formulario.html';
+        location.href='crear_cuenta.html';
     }
 
 }

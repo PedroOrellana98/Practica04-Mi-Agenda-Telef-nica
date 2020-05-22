@@ -27,6 +27,14 @@ section form fieldset input {
 }
 
 #botonContacto {
+    float: left;
+    margin-top: 30px;
+    width: 80px;
+    margin-left: 50%;
+    text-align: center;
+}
+
+#botonContacto1 {
     margin-top: 30px;
     width: 80px;
     margin-left: 50%;

@@ -12,9 +12,9 @@
     <body>
     <header>
         <h1 id = "titulo"> FORMULARIO </h1>
-        <img id="tituloImangen" src="../../../images/cuenta.jpg" alt="cuenta">
+        <img id="tituloImagen" src="../../../images/cuenta.jpg" alt="cuenta">
         <input id ="tituloTexto" type="search" placeholder="Buscar">
-        <img id="imagenPerfil" src="../../../images/perfil.jpg" alt="perfil"> 
+        <img id="imagenPerfil" src="../../../images/perfil.png" alt="perfil"> 
     </header>
     <div class = "divNav">
         <nav class="navegar">
@@ -26,7 +26,7 @@
         </div>
     <section class="sectionContenido">
         <h2 hidden> CONTENIDO </h2>
-        <form>
+        <form id = "formulario" method = "POST" action = "../controladores/crear_usuario.php">
             <fieldset>
                     <legend> FORMULARIO </legend>
                     <label class="labelContacto"> CEDULA* </label><br>
@@ -45,6 +45,7 @@
                     <input type="password" id="txtContra" name="contraseña" placeholder="Ingrese su contraseña" onchange="validarContraseña()">
                     <span id="mensajeContra"></span><br>
                     <input type = "button" id = "botonContacto"  value="Validar" onclick="validar();">
+                    <input type = "submit" id = "botonContacto1"  value="Crear"  name = "crear" disabled>
             </fieldset>
         </form>
     </section>

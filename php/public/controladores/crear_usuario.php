@@ -16,15 +16,12 @@
                       
 
         $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
-        $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
-        $apellidos = isset($_POST["apellidos"]) ? mb_strtoupper(trim($_POST["apellidos"]), 'UTF-8') : null;
-        $direccion = isset($_POST["usu_direccion"]) ? mb_strtoupper(trim($_POST["usu_direccion"]), 'UTF-8') : null;
-        $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]): null;        
-        $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
-        $fechaNacimiento = isset($_POST["fecha"]) ? trim($_POST["fecha"]): null;        
+        $nombres = isset($_POST["nombre"]) ? mb_strtoupper(trim($_POST["nombre"]), 'UTF-8') : null;
+        $apellidos = isset($_POST["apellido"]) ? mb_strtoupper(trim($_POST["apellido"]), 'UTF-8') : null;      
+        $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;       
         $contrasena = isset($_POST["contraseña"]) ? trim($_POST["contraseña"]) : null;
-        $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$telefono',
-        '$correo', MD5('$contrasena'), '$fechaNacimiento', 'N', null, null)";        
+        $sql = "INSERT INTO usuario VALUES (0, '$cedula', 'u' '$nombres', '$apellidos', '$correo', 
+            '$contrasena' )";        
         
                 if ($conn->query($sql) === TRUE) {
                     echo "<p>Se ha creado los datos personales correctamemte!!!</p>";     
@@ -38,7 +35,7 @@
                 
                 //cerrar la base de datos
                 $conn->close();
-                echo "<a href='../vista/crear_usuario.html'>Regresar</a>";
+                echo "<a href='../vista/crear_cuenta.html'>Regresar</a>";
                           
             ?>
         
