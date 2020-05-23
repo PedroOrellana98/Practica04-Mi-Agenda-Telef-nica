@@ -10,10 +10,8 @@
         <tr>
             <th>Cedula</th>
             <th>Nombres</th> 
-            <th>Apellidos</th>
-            <th>Telefono</th>            
-            <th>Correo</th>
-            <th>Fecha Nacimiento</th>            
+            <th>Apellidos</th>           
+            <th>Correo</th>         
         </tr>
 
         <?php
@@ -25,15 +23,13 @@
                 
                 while($row = $result->fetch_assoc()) {
                     echo "<tr>";
-                    echo "   <td>" . $row["usu_cedula"] . "</td>";
-                    echo "   <td>" . $row['usu_nombres'] ."</td>";
-                    echo "   <td>" . $row['usu_apellidos'] . "</td>";
-                    echo "   <td>" . $row['usu_telefono'] . "</td>"; 
-                    echo "   <td>" . $row['usu_correo'] . "</td>";   
-                    echo "   <td>" . $row['usu_fecha_nacimiento'] . "</td>";    
-                    echo "   <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
-                    echo "   <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-                    echo "   <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";                                                                    
+                    echo "   <td>" . $row["cedula"] . "</td>";
+                    echo "   <td>" . $row['nombres'] ."</td>";
+                    echo "   <td>" . $row['apellidos'] . "</td>";
+                    echo "   <td>" . $row['correo'] . "</td>";      
+                    //echo "   <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
+                    //echo "   <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
+                    //echo "   <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";                                                                    
                     echo "</tr>";
                 }
             } else {
