@@ -1,0 +1,33 @@
+.sectionContenido {
+    float: left;
+    margin-top: 30px;
+    width: 60%;
+    margin-left: 4%;
+    margin-bottom: 10px;
+}
+
+body{
+    background-image: url(https://cdn2.f-cdn.com/contestentries/1108779/25763747/5995bb343b3c7_thumb900.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+ul > li > a, #titulo {
+    color: white !important;
+}
+
+form {
+    color: white;
+}
+
+.txtForm{
+    width: 225px;
+}
+
+#botonIniciar {
+    margin-top: 20px;
+    align-items: center;
+    margin-left: 50%;
+    font-size: medium;
+    width: 100px;
+}
