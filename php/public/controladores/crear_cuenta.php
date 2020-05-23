@@ -20,8 +20,7 @@
         $apellidos = isset($_POST["apellido"]) ? mb_strtoupper(trim($_POST["apellido"]), 'UTF-8') : null;      
         $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;       
         $contrasena = isset($_POST["contraseña"]) ? trim($_POST["contraseña"]) : null;
-        $sql = "INSERT INTO usuario VALUES (0, '$cedula', 'u' '$nombres', '$apellidos', '$correo', 
-            '$contrasena' )";        
+        $sql = "INSERT INTO `usuario`(`codigo`, `cedula`, `rol`, `nombres`, `apellidos`, `correo`, `contrasena`) VALUES (0,'$cedula','u','$nombres','$apellidos','$correo', MD5('$contrasena'))";        
         
                 if ($conn->query($sql) === TRUE) {
                     echo "<p>Se ha creado los datos personales correctamemte!!!</p>";     
