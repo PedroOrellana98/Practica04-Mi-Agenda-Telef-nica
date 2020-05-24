@@ -23,10 +23,11 @@
         $sql = "INSERT INTO `usuario`(`codigo`, `cedula`, `rol`, `nombres`, `apellidos`, `correo`, `contrasena`) VALUES (0,'$cedula','u','$nombres','$apellidos','$correo', MD5('$contrasena'))";        
         
                 if ($conn->query($sql) === TRUE) {
-                    echo "<p>Se ha creado los datos personales correctamemte!!!</p>";     
+                    header("Location: ../../public/vista/crear_telefono.html");
                 } else {
                     if($conn->errno == 1062){
-                        echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";     
+                        echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";  
+                        header("Location: ../../public/vista/crear_cuenta.html"); 
                     }else{
                         echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
                     }            

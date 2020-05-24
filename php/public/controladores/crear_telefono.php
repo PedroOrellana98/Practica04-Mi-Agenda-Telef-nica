@@ -16,15 +16,14 @@
     $sql = "INSERT INTO `telefono`(`codigo`, `numero`, `tipo`, `operadora`, `codigo_usuario`) VALUES (0,'$numero','$tipo','$operadora','$id')";        
     
     if ($conn->query($sql) === TRUE) {
-        echo "<p>Se ha creado los datos personales correctamemte!!!</p>";     
+        header("Location: ../../../index.html");
     } else {
         if($conn->errno == 1062){
-            echo "<p>No ha creado los datos del telefono</p>";     
+            header("Location: ../../public/vista/crear_telefono.html");
         }else{
             echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
         }            
     }
 
     $conn->close();
-    echo "<a href='../vista/crear_cuenta.html'>Regresar</a>";
 ?>
