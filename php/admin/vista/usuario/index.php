@@ -5,8 +5,16 @@
     <title>Gestión de usuarios</title>
 </head>
 <body>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
     
-    <table style="width:100%">
+    <table>
         <tr>
             <th>Cedula</th>
             <th>Nombres</th> 
@@ -16,9 +24,12 @@
 
         <?php
             include '../../../config/conexionBD.php'; 
-            $sql = "SELECT * FROM usuario";
-            $result = $conn->query($sql);
+
+            $correo = isset($_GET["correo"]) ? trim($_GET["correo"]): null;
+            $sql = "SELECT * FROM usuario WHERE correo = '$correo'";
             
+            $result = $conn->query($sql);
+
             if ($result->num_rows > 0) {
                 
                 while($row = $result->fetch_assoc()) {
@@ -27,9 +38,9 @@
                     echo "   <td>" . $row['nombres'] ."</td>";
                     echo "   <td>" . $row['apellidos'] . "</td>";
                     echo "   <td>" . $row['correo'] . "</td>";      
-                    //echo "   <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
-                    //echo "   <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-                    //echo "   <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";                                                                    
+                    echo "   <td> <a href='eliminar.php?codigo=" . $row['codigo'] . "'>Eliminar</a> </td>";
+                    echo "   <td> <a href='modificar.php?codigo=" . $row['codigo'] . "'>Modificar</a> </td>";
+                    echo "   <td> <a href='cambiar_contrasena.php?codigo=" . $row['codigo'] . "'>Cambiar contraseña</a> </td>";                                                                    
                     echo "</tr>";
                 }
             } else {
