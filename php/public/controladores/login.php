@@ -17,4 +17,7 @@
     } else {
         header("Location: ../vista/login.html");
     }
+
+    $conn->close();
+    echo "<a href='../vista/crear_cuenta.html'>Regresar</a>";
 ?>
