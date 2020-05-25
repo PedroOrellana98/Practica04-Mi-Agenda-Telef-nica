@@ -12,7 +12,7 @@
     <header>
         <h1 id = "titulo"> SEARCH </h1>
         <img id="tituloImagen" src="../../../images/cuenta.jpg" alt="cuenta">
-        <input id ="tituloTexto" type="search" placeholder="Buscar" disabled>
+        <input id ="tituloTexto" type="search" disabled>
     </header>
     <div class = "divNav">
         <nav class="navegar">
@@ -27,6 +27,8 @@
         <form id = "formulario" onsubmit="return buscar()">
             <fieldset>
                     <legend> BUSCAR </legend>
+                    <label class="labelContacto"> CORREO ELECTRONICO </label><br>
+                    <input type="text" class = "txtForm" id="txtCorreo" name="correo" placeholder="Ingrese el correo a buscar">
                     <label class="labelContacto"> CEDULA </label><br>
                     <input type="text" class = "txtForm" id="txtCedula" name="cedula" placeholder="Ingrese la cedula a buscar">
                     <div></div>

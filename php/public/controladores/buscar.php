@@ -3,11 +3,19 @@
     include '../../config/conexionBD.php';
 
     $cedula = $_GET['cedula'];
-    
-    $sql = "SELECT * FROM usuario WHERE cedula = '$cedula'";
+    $correo = $_GET['correo'];
+
+    $sql = "SELECT * FROM usuario WHERE correo = '$correo' or cedula = '$cedula'";
 
     $result = $conn->query($sql);
-    echo "    <table style='width:100%'>
+    echo "    <style>
+                    table, th, td {
+                        margin-top: 20px;
+                        border: 1px solid white;
+                    }
+                </style>
+
+                <table>
                 <tr>
                     <th>Cedula</th>
                     <th>Nombres</th> 
