@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
     <title>
-        Iniciar Sesion
+        Buscar Persona
     </title>
     <meta charset="UTF-8" />
     <meta name="keywords" content="Cuenta, Formulario" />
     <link href= "../../../css/general.css" rel="stylesheet" type="text/css"/>
-    <link href= "../../../css/login.css" rel="stylesheet" type="text/css"/>
+    <link href= "../../../css/buscar.css" rel="stylesheet" type="text/css"/>
+    <script src = "../../../js/buscar.js"></script>
     <body>
     <header>
-        <h1 id = "titulo"> LOG IN </h1>
+        <h1 id = "titulo"> SEARCH </h1>
         <img id="tituloImagen" src="../../../images/cuenta.jpg" alt="cuenta">
         <input id ="tituloTexto" type="search" placeholder="Buscar" disabled>
     </header>
@@ -23,16 +24,14 @@
         </div>
     <section class="sectionContenido">
         <h2 hidden> CONTENIDO </h2>
-        <form id = "formulario" method = "POST" action = "../controladores/login.php">
+        <form id = "formulario" onsubmit="return buscar()">
             <fieldset>
-                    <legend> INICIAR SESION </legend>
-                    <label class="labelContacto"> CORREO ELECTRONICO* </label><br>
-                    <input type="text" class = "txtForm" id="txtCorreo" name="correo" placeholder="Ingrese su correo">
-                    <span id="mensajeCorreo"></span><br>
-                    <label class="labelContacto"> CONTRASEÑA* </label><br>
-                    <input type="password" class = "txtForm" id="txtContra" name="contraseña" placeholder="Ingrese su contraseña">
-                    <span id="mensajeContra"></span><br>
-                    <input type = "submit" id = "botonIniciar"  value="Iniciar"  name = "iniciar">
+                    <legend> BUSCAR </legend>
+                    <label class="labelContacto"> CEDULA </label><br>
+                    <input type="text" class = "txtForm" id="txtCedula" name="cedula" placeholder="Ingrese la cedula a buscar">
+                    <div></div>
+                    <input type = "button" id = "botonBuscar"  value= "Buscar" onclick=" buscar()">
+                    <div id="informacion"></div> 
             </fieldset>
         </form>
     </section>

@@ -12,7 +12,6 @@
         while ($fila = $result->fetch_assoc()) {
             $_SESSION['isLogged'] = TRUE;
             header("Location: ../../admin/vista/usuario/index.php?correo=$usuario");
-            //header("Location: ../../admin/vista/usuario/index.php");
         }
     } else {
         header("Location: ../vista/login.html");

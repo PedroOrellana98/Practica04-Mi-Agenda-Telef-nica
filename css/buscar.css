@@ -1,0 +1,33 @@
+.sectionContenido {
+    float: left;
+    margin-top: 30px;
+    width: 60%;
+    margin-left: 4%;
+    margin-bottom: 10px;
+}
+
+body{
+    background-image: url(https://i.pinimg.com/originals/49/73/ea/4973ead72580df908af111b6770fe6ac.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+ul > li > a, #titulo {
+    color: white !important;
+}
+
+#formulario {
+    color: white;
+}
+
+.txtForm{
+    width: 225px;
+}
+
+#botonBuscar {
+    margin-top: 20px;
+    align-items: center;
+    margin-left: 45%;
+    font-size: medium;
+    width: 100px;
+}

@@ -31,13 +31,22 @@ a:visited {
     height: 150px;
 }
 
+#imagenBuscar {
+    float: left;
+    border-radius: 30%;
+    width: 100px;
+    height: 80px;
+    margin-top: 25px;
+    margin-left: 5%;
+}
+
 #imagenCorreo {
     float: left;
     border-radius: 30%;
     width: 100px;
     height: 80px;
     margin-top: 25px;
-    margin-left: 1%;
+    margin-left: 2%;
 }
 
 #imagenPerfil {
@@ -46,7 +55,7 @@ a:visited {
     width: 100px;
     height: 80px;
     margin-top: 25px;
-    margin-left: 10%;
+    margin-left: 2%;
 }
 
 #imagenFacebook {
