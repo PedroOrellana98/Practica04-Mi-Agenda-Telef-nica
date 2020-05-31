@@ -1,0 +1,25 @@
+.sectionContenido {
+    float: left;
+    margin-top: 30px;
+    width: 70%;
+    margin-left: 4%;
+    margin-bottom: 10px;
+}
+
+body{
+    background-image: url(https://images7.alphacoders.com/708/thumb-350-708805.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+ul > li > a, #titulo {
+    color: white !important;
+}
+
+#formulario {
+    color: white;
+}
+
+.txtForm{
+    width: 225px;
+}

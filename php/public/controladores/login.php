@@ -13,9 +13,9 @@
         while ($fila = $result->fetch_assoc()) {
             $_SESSION['isLogged'] = TRUE;
             if($fila['rol'] == "u"){
-                echo("usuario");
+                header("Location: ../../admin/vista/user/editarDatos.html?correo=" . $usuario . "&contrasena=" . md5($contrasena));
             }else if($fila['rol'] == "a"){
-                echo("admin");
+                header("Location: ../../admin/vista/admin/editar.html?correo=" . $usuario . "&contrasena=" . md5($contrasena));
             }
         }
     } else {
@@ -23,5 +23,5 @@
     }
 
     $conn->close();
-    echo "<a href='../vista/login.html'>Regresar</a>";
+    //echo "<a href='../vista/login.html'>Regresar</a>";
 ?>
