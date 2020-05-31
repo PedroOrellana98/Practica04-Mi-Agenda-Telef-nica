@@ -8,8 +8,8 @@
     $contrasena = $_GET['contrasena'];
     
 
-    $sql = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$contrasena'";
-
+    //$sql = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$contrasena'";
+    $sql = "SELECT u.cedula, u.nombres, u.apellidos, u.correo, u.contrasena, t.numero, t.tipo, t.operadora FROM usuario u, telefono t WHERE u.codigo = t.codigo_usuario";
     $result = $conn->query($sql);
     echo "    <style>
                     table, th, td {
@@ -23,7 +23,11 @@
                     <th>Cedula</th>
                     <th>Nombres</th> 
                     <th>Apellidos</th>          
-                    <th>Correo</th>    
+                    <th>Correo</th>   
+                    <th>Contraseña</th>
+                    <th>Numero</th>
+                    <th>Tipo</th>
+                    <th>Operadora</th> 
                 </tr>";
 
     if ($result->num_rows > 0) {        
@@ -34,20 +38,25 @@
             echo "   <td>" . $row['nombres'] ."</td>";
             echo "   <td>" . $row['apellidos'] . "</td>";
             echo "   <td>" . $row['correo'] . "</td>";
-            echo "   <td> <a href='eliminar.php?cedula=" . $row['cedula'] . "'>Agregar</a> </td>";
-            echo "   <td> <a href='eliminar.php?cedula=" . $row['cedula'] . "'>Modificar</a> </td>";
-            echo "   <td> <a href='modificar.php?cedula=" . $row['cedula'] . "'>Eliminar</a> </td>";
-            echo "   <td> <a href='buscar.php?cedula=" . $row['cedula'] . "'>Buscar</a> </td>";
-            echo "   <td> <a href='cambiar_contrasena.php?cedula=" . $row['cedula'] . "'>Cambiar
-            contraseña</a> </td>";                   
+            echo "   <td>" . $row['contrasena'] . "</td>";
+            echo "   <td>" . $row['numero'] . "</td>";
+            echo "   <td>" . $row['tipo'] . "</td>";
+            echo "   <td>" . $row['operadora'] . "</td>";                
             echo "</tr>";   
-        }        
+        }   
+        
     } else {        
         echo "<tr>";
         echo "   <td colspan='7'> No existen usuarios registradas en el sistema </td>";
         echo "</tr>";     
     }
     echo "</table>";
+    echo "<br> <a href='agregar.html'>Agregar</a> <br>";
+    echo "<br> <a href='eliminar.php'>Modificar</a> <br>";
+    echo "<br> <a href='modificar.php'>Eliminar</a> <br>";
+    echo "<br> <a href='buscar.php'>Buscar</a> <br>";
+    echo "<br> <a href='cambiar_contrasena.php'>Cambiar contraseña</a> <br>";
+    
     $conn->close(); 
   
 ?> 

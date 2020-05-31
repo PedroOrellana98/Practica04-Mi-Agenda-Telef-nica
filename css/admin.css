@@ -1,0 +1,44 @@
+.sectionContenido {
+    float: left;
+    margin-top: 30px;
+    width: 60%;
+    margin-left: 4%;
+    margin-bottom: 10px;
+    color: white;
+}
+
+body{
+    background-image: url(https://i.pinimg.com/originals/92/b7/94/92b794765f888c69433d3672a7d0308d.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+ul > li > a, #titulo {
+    color: white !important;
+}
+
+section form fieldset input {
+    width: 200px;
+}
+
+#divFormulario {
+    margin-top: 10px;   
+    margin-left: 25%;
+    width: 40%;
+}
+
+#botonContacto {
+    float: left;
+    margin-top: 30px;
+    width: 80px;
+    margin-left: 50%;
+    text-align: center;
+}
+
+#botonContacto1 {
+    margin-top: 30px;
+    width: 100px;
+    margin-left: 49%;
+    text-align: center;
+}
+
