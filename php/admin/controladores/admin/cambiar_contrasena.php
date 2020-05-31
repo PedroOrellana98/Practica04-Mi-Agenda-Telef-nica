@@ -24,7 +24,7 @@
         } else {
             if($conn->errno == 1062){
                 echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";  
-                header("Location: ../../vista/admin/editar.html");
+                header("Location: ../../vista/admin/cambiar_contrasena.html");
             }else{
                 echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
             }            

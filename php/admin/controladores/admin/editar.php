@@ -9,7 +9,7 @@
     
 
     //$sql = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$contrasena'";
-    $sql = "SELECT u.cedula, u.nombres, u.apellidos, u.correo, u.contrasena, t.numero, t.tipo, t.operadora FROM usuario u, telefono t WHERE u.codigo = t.codigo_usuario";
+    $sql = "SELECT u.codigo, u.cedula, u.nombres, u.apellidos, u.correo, u.contrasena, t.numero, t.tipo, t.operadora FROM usuario u, telefono t WHERE u.codigo = t.codigo_usuario";
     $result = $conn->query($sql);
     echo "    <style>
                     table, th, td {
@@ -20,6 +20,7 @@
 
                 <table>
                 <tr>
+                    <th>Codigo</th>
                     <th>Cedula</th>
                     <th>Nombres</th> 
                     <th>Apellidos</th>          
@@ -34,6 +35,7 @@
         while($row = $result->fetch_assoc()) {
             
             echo "<tr>";
+            echo "   <td>" . $row['codigo'] . "</td>";
             echo "   <td>" . $row['cedula'] . "</td>";
             echo "   <td>" . $row['nombres'] ."</td>";
             echo "   <td>" . $row['apellidos'] . "</td>";

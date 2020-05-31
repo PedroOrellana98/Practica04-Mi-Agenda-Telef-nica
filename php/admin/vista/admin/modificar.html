@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <title>
+        Modificar Usuario
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Cuenta, Formulario" />
+    <link href= "../../../../css/general.css" rel="stylesheet" type="text/css"/>
+    <link href= "../../../../css/admin.css" rel="stylesheet" type="text/css"/>
+    <body>
+    <header>
+        <h1 id = "titulo"> UPDATE USER </h1>
+        <img id="tituloImagen" src="../../../../images/cuenta.jpg" alt="cuenta">
+        <input id ="tituloTexto" type="search" disabled>
+    </header>
+    <div class = "divNav">
+        <nav class="navegar">
+            <ul class = "list">
+                <li><a href= "editar.html">Editar </a></li>
+                <li><a href=#footerInfo>Contacto </a></li>
+            </ul>
+        </nav>
+        </div>
+    <section class="sectionContenido">
+        <h2 hidden> CONTENIDO </h2>
+        <form id = "formulario" method = "POST" action = "../../controladores/admin/modificar.php">
+            <fieldset>
+                    <legend> DATOS DE MODIFICACION </legend>
+                    <label class="labelContacto"> CODIGO </label><br>
+                    <input type="text" id="txtCodigo" name="codigo"><br>
+                    <label class="labelContacto"> CEDULA </label><br>
+                    <input type="text" id="txtCedula" name="cedula"><br>
+                    <label class="labelContacto"> NOMBRES </label><br>
+                    <input type="text" id="txtNombre" name="nombre"><br>
+                    <label class="labelContacto"> APELLIDOS </label><br>
+                    <input type="text" id="txtApellido" name="apellido"><br>
+                    <label class="labelContacto"> CORREO ELECTRONICO </label><br>
+                    <input type="text" id="txtCorreo" name="correo"><br>
+                    <label class="labelContacto"> CONTRASEÑA </label><br>
+                    <input type="text" id="txtContra" name="contraseña"><br>
+                    <label class="labelContacto"> NUMERO </label><br>
+                    <input type="text" id="txtNumero" name="numero"><br>
+                    <label class="labelContacto"> TIPO </label><br>
+                    <input type="text" id="txtTipo" name="tipo"><br>
+                    <label class="labelContacto"> OPERADORA </label><br>
+                    <input type="text" id="txtOpera" name="operadora"><br>
+                    <input type = "submit" id = "botonContacto"  value="Modificar">
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div id = "footerInfo">
+            <div id = "divImage1">
+                <img id="imagenFacebook" src="../../../../images/facebook.png" alt="facebook">
+                <img id="imagenInstagram" src="../../../../images/instagram.png" alt="instagram">
+            </div>
+            <div id = "divImage2">
+                <img id="imagenContacto" src="../../../../images/contacto.png" alt="contacto">
+            </div>
+            <div id = "divCopy">
+                &copy; Todos los derechos reservados
+            </div>
+        </div>
+        <div id = "footerContacto">
+            <form>
+                <fieldset>
+                    <legend> Quien Soy </legend>
+                        <label class="labelContacto"> PEDRO JOSE ORELLANA </label>
+                        <label class="labelContacto"> Correo: <a href="mailto:porellanaj@est.ups.edu.ec"> 
+                        porellanaj@est.ups.edu.ec </a> </label>
+                        <label class="labelContacto"> Telefono: <a href="tel:+59398550859"> 
+                            0998550859 </a> </label>
+                            <label class="labelContacto"> UNIVERSIDAD POLITECNICA SALESIANA </label>
+                </fieldset>
+            </form>
+        </div>
+        <div id = "footerLocalizacion">
+            <iframe id = "localizacion"
+            src="https://maps.google.com/?ll=-2.886850,-78.989353&z=16&output=embed"></iframe>
+        </div>
+    </footer>
+    </body>   
+</html>
