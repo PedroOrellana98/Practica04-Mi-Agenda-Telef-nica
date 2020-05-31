@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
     <title>
-        Insertar Usuario
+        Buscar Persona
     </title>
     <meta charset="UTF-8" />
     <meta name="keywords" content="Cuenta, Formulario" />
     <link href= "../../../../css/general.css" rel="stylesheet" type="text/css"/>
     <link href= "../../../../css/admin.css" rel="stylesheet" type="text/css"/>
+    <script src = "../../../../js/buscarP.js"></script>
     <body>
     <header>
-        <h1 id = "titulo"> INSERT </h1>
+        <h1 id = "titulo"> SEARCH </h1>
         <img id="tituloImagen" src="../../../../images/cuenta.jpg" alt="cuenta">
         <input id ="tituloTexto" type="search" disabled>
     </header>
@@ -23,26 +24,13 @@
         </div>
     <section class="sectionContenido">
         <h2 hidden> CONTENIDO </h2>
-        <form id = "formulario" method = "POST" action = "../../controladores/admin/agregar.php">
+        <form id = "formulario" onsubmit="return buscarP()">
             <fieldset>
-                    <legend> DATOS DE INGRESO </legend>
+                    <legend> BUSCAR </legend>
                     <label class="labelContacto"> CEDULA </label><br>
-                    <input type="text" id="txtCedula" name="cedula"><br>
-                    <label class="labelContacto"> NOMBRES </label><br>
-                    <input type="text" id="txtNombre" name="nombre"><br>
-                    <label class="labelContacto"> APELLIDOS </label><br>
-                    <input type="text" id="txtApellido" name="apellido"><br>
-                    <label class="labelContacto"> CORREO ELECTRONICO </label><br>
-                    <input type="text" id="txtCorreo" name="correo"><br>
-                    <label class="labelContacto"> CONTRASEÑA </label><br>
-                    <input type="text" id="txtContra" name="contraseña"><br>
-                    <label class="labelContacto"> NUMERO </label><br>
-                    <input type="text" id="txtNumero" name="numero"><br>
-                    <label class="labelContacto"> TIPO </label><br>
-                    <input type="text" id="txtTipo" name="tipo"><br>
-                    <label class="labelContacto"> OPERADORA </label><br>
-                    <input type="text" id="txtOpera" name="operadora"><br>
-                    <input type = "submit" id = "botonContacto1"  value="Crear"  name = "crear">
+                    <input type="text" class = "txtForm" id="txtCedula" name="cedula" placeholder="Ingrese la cedula a buscar"><br>
+                    <input type = "button" id = "botonContacto1" value= "Buscar" onclick=" buscarP()">
+                    <div id="informacion"></div> 
             </fieldset>
         </form>
     </section>

@@ -27,6 +27,14 @@ section form fieldset input {
     width: 40%;
 }
 
+#formulario {
+    color: white;
+}
+
+.txtForm{
+    width: 225px !important;
+}
+
 #botonContacto {
     float: left;
     margin-top: 30px;
@@ -41,4 +49,3 @@ section form fieldset input {
     margin-left: 49%;
     text-align: center;
 }
-
