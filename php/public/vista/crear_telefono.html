@@ -7,7 +7,7 @@
     <meta name="keywords" content="Cuenta, Formulario" />
     <link href= "../../../css/general.css" rel="stylesheet" type="text/css"/>
     <link href= "../../../css/formulario.css" rel="stylesheet" type="text/css"/>
-    <script src = "../../../js/formulario.js"></script>
+    <script src = "../../../js/formulario1.js"></script>
     <body>
     <header>
         <h1 id = "titulo"> CREATE PHONE </h1>
@@ -28,15 +28,16 @@
             <fieldset>
                     <legend> CREAR TELEFONO </legend>
                     <label class="labelContacto"> NUMERO* </label><br>
-                    <input type="text" id="txtCedula" name="numero" placeholder="Ingrese su nombre">
-                    <span id="mensajeCedula"></span><br>
+                    <input type="text" id="txtNumero" name="numero" placeholder="Ingrese su numero" onchange="validarNumero()">
+                    <span id="mensajeNumero"></span><br>
                     <label class="labelContacto"> TIPO* </label><br>
-                    <input type="text" id="txtNombre" name="tipo" placeholder="Ingrese sus tipo">
-                    <span id="mensajeNombre"></span><br>
+                    <input type="text" id="txtTipo" name="tipo" placeholder="Ingrese sus tipo" onchange="validarTipo()">
+                    <span id="mensajeTipo"></span><br>
                     <label class="labelContacto"> OPERADORA* </label><br>
-                    <input type="text" id="txtApellido" name="operadora" placeholder="Ingrese su operadora">
-                    <span id="mensajeApellido"></span><br>
-                    <input type = "submit" id = "botonContacto1"  value="Crear"  name = "crear">
+                    <input type="text" id="txtOperadora" name="operadora" placeholder="Ingrese su operadora" onchange="validarOperadora()">
+                    <span id="mensajeOperadora"></span><br>
+                    <input type = "button" id = "botonContacto"  value="Validar" onclick="validar();">
+                    <input type = "submit" id = "botonContacto1"  value="Crear"  name = "crear" disabled>
             </fieldset>
         </form>
     </section>

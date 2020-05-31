@@ -7,6 +7,7 @@
     <meta name="keywords" content="Cuenta, Formulario" />
     <link href= "../../../../css/general.css" rel="stylesheet" type="text/css"/>
     <link href= "../../../../css/admin.css" rel="stylesheet" type="text/css"/>
+    <script src = "../../../../js/validar.js"></script>
     <body>
     <header>
         <h1 id = "titulo"> INSERT </h1>
@@ -26,23 +27,32 @@
         <form id = "formulario" method = "POST" action = "../../controladores/admin/agregar.php">
             <fieldset>
                     <legend> DATOS DE INGRESO </legend>
-                    <label class="labelContacto"> CEDULA </label><br>
-                    <input type="text" id="txtCedula" name="cedula"><br>
-                    <label class="labelContacto"> NOMBRES </label><br>
-                    <input type="text" id="txtNombre" name="nombre"><br>
-                    <label class="labelContacto"> APELLIDOS </label><br>
-                    <input type="text" id="txtApellido" name="apellido"><br>
-                    <label class="labelContacto"> CORREO ELECTRONICO </label><br>
-                    <input type="text" id="txtCorreo" name="correo"><br>
-                    <label class="labelContacto"> CONTRASEÑA </label><br>
-                    <input type="text" id="txtContra" name="contraseña"><br>
-                    <label class="labelContacto"> NUMERO </label><br>
-                    <input type="text" id="txtNumero" name="numero"><br>
-                    <label class="labelContacto"> TIPO </label><br>
-                    <input type="text" id="txtTipo" name="tipo"><br>
-                    <label class="labelContacto"> OPERADORA </label><br>
-                    <input type="text" id="txtOpera" name="operadora"><br>
-                    <input type = "submit" id = "botonContacto1"  value="Crear"  name = "crear">
+                    <label class="labelContacto"> CEDULA* </label><br>
+                    <input type="text" id="txtCedula" name="cedula" onchange="validarCedula()"><br>
+                    <span id="mensajeCedula"></span><br>
+                    <label class="labelContacto"> NOMBRES* </label><br>
+                    <input type="text" id="txtNombre" name="nombre" onkeydown="validarNombre()"><br>
+                    <span id="mensajeNombre"></span><br>
+                    <label class="labelContacto"> APELLIDOS* </label><br>
+                    <input type="text" id="txtApellido" name="apellido" onkeydown="validarApellido()"><br>
+                    <span id="mensajeApellido"></span><br>
+                    <label class="labelContacto"> CORREO ELECTRONICO* </label><br>
+                    <input type="text" id="txtCorreo" name="correo" onkeyup="validarCorreo()"><br>
+                    <span id="mensajeCorreo"></span><br>
+                    <label class="labelContacto"> CONTRASEÑA* </label><br>
+                    <input type="password" id="txtContra" name="contraseña" onchange="validarContraseña()"><br>
+                    <span id="mensajeContra"></span><br>
+                    <label class="labelContacto"> NUMERO* </label><br>
+                    <input type="text" id="txtNumero" name="numero" onchange="validarNumero()"><br>
+                    <span id="mensajeNumero"></span><br>
+                    <label class="labelContacto"> TIPO* </label><br>
+                    <input type="text" id="txtTipo" name="tipo" onchange="validarTipo()"><br>
+                    <span id="mensajeTipo"></span><br>
+                    <label class="labelContacto"> OPERADORA* </label><br>
+                    <input type="text" id="txtOpera" name="operadora" onchange="validarOperadora()"><br>
+                    <span id="mensajeOpera"></span><br>
+                    <input type = "button" id = "botonContacto"  value="Validar" onclick="validarForm();">
+                    <input type = "submit" id = "botonContacto1"  value="Crear"  name = "crear" disabled>
             </fieldset>
         </form>
     </section>
