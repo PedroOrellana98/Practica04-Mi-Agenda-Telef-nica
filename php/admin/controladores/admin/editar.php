@@ -52,8 +52,8 @@
     }
     echo "</table>";
     echo "<br> <a href='agregar.html'>Agregar</a> <br>";
-    echo "<br> <a href='eliminar.html'>Modificar</a> <br>";
-    echo "<br> <a href='modificar.html'>Eliminar</a> <br>";
+    echo "<br> <a href='modificar.html'>Modificar</a> <br>";
+    echo "<br> <a href='eliminar.html'>Eliminar</a> <br>";
     echo "<br> <a href='buscarP.html'>Buscar</a> <br>";
     echo "<br> <a href='cambiar_contrasena.html'>Cambiar contraseña</a> <br>";
     
