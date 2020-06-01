@@ -87,6 +87,33 @@ function eliminarU(){
 
 }
 
+function eliminarT(){
+
+    let params = new URLSearchParams(location.search);
+    var correo = params.get('correo');
+
+    if (correo != ""){ 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //alert("llegue cedula");
+            }
+        };
+
+        xmlhttp.open("GET","../../controladores/user/eliminarT.php?correo="+correo,true);
+        xmlhttp.send();
+
+    }
+    return false;
+
+}
+
 function modificarU(){
 
     let params = new URLSearchParams(location.search);
@@ -140,6 +167,36 @@ function modificarT(){
         };
 
         xmlhttp.open("GET","../../controladores/user/modificarT.php?correo="+correo+"&numero="+numero+"&tipo="+tipo+"&opera="+opera,true);
+        xmlhttp.send();
+
+    }
+    return false;
+
+}
+
+function ingresarT(){
+
+    let params = new URLSearchParams(location.search);
+    var correo = params.get('correo');
+    var numero = document.getElementById("txtNumero").value;
+    var tipo = document.getElementById("txtTipo").value;
+    var opera = document.getElementById("txtOpera").value;
+
+    if (correo != ""){ 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //alert("llegue cedula");
+            }
+        };
+
+        xmlhttp.open("GET","../../controladores/user/ingresarT.php?correo="+correo+"&numero="+numero+"&tipo="+tipo+"&opera="+opera,true);
         xmlhttp.send();
 
     }
@@ -332,6 +389,34 @@ function validar2(){
     }else{
         alert("Revise sus campos");
         location.href='modificarT.html';
+    }
+
+}
+
+function validar3(){
+
+    sum = contN+contT+contO;
+    telefono = document.getElementById("txtNumero").value;
+    tipo = document.getElementById("txtTipo").value;
+    opera = document.getElementById("txtOpera").value;
+
+    if (telefono.length < 1) {
+        alert("Campo Telefono vacio");
+    }
+    if (tipo.length < 1) {
+        alert("Campo Tipo vacio");
+    }
+    if (opera.length < 1) {
+        alert("Campo Operadora vacio");
+    }
+
+    if (sum == 3) {
+        boton = document.getElementById("botonContacto");
+        boton1 = document.getElementById("botonContacto1");
+        boton1.disabled = false
+    }else{
+        alert("Revise sus campos");
+        location.href='agregarT.html';
     }
 
 }

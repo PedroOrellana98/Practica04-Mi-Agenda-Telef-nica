@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Cambiar Contraseña</title>
+    <title>Modificar Usuario</title>
     <style type="text/css" rel="stylesheet">
         .error{
             color: red;
@@ -26,7 +26,7 @@
         } else {
             if($conn->errno == 1062){
                 echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";  
-                header("Location: ../../vista/user/cambiar_contrasenaU.html");
+                header("Location: ../../vista/user/modificarU.html");
             }else{
                 echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
             }            
