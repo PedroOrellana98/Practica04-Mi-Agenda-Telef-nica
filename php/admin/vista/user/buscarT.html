@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+    <title>
+        Buscar Telefono
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Cuenta, Formulario" />
+    <link href= "../../../../css/general.css" rel="stylesheet" type="text/css"/>
+    <link href= "../../../../css/admin.css" rel="stylesheet" type="text/css"/>
+    <script src = "../../../../js/editarU.js"></script>
+    <body>
+    <header>
+        <h1 id = "titulo"> SEARCH PHONE </h1>
+        <img id="tituloImagen" src="../../../../images/cuenta.jpg" alt="cuenta">
+        <input id ="tituloTexto" type="search" disabled>
+    </header>
+    <div class = "divNav">
+        <nav class="navegar">
+            <ul class = "list">
+                <li><a href= "../../../public/vista/login.html">Log In </a></li>
+                <li><a href=#footerInfo>Contacto </a></li>
+            </ul>
+        </nav>
+        </div>
+    <section class="sectionContenido">
+        <h2 hidden> CONTENIDO </h2>
+        <form id = "formulario" onsubmit="return buscarT()">
+            <fieldset>
+                    <legend> DATOS DE BUSQUEDA </legend>
+                    <label class="labelContacto"> NUMERO </label><br>
+                    <input type="text" id="txtNumero" name="numero"><br>
+                    <input type = "button" id = "botonContacto1"  value="Buscar"  name = "modificar" onclick="buscarT()">
+                    <div id="informacion"></div> 
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div id = "footerInfo">
+            <div id = "divImage1">
+                <img id="imagenFacebook" src="../../../../images/facebook.png" alt="facebook">
+                <img id="imagenInstagram" src="../../../../images/instagram.png" alt="instagram">
+            </div>
+            <div id = "divImage2">
+                <img id="imagenContacto" src="../../../../images/contacto.png" alt="contacto">
+            </div>
+            <div id = "divCopy">
+                &copy; Todos los derechos reservados
+            </div>
+        </div>
+        <div id = "footerContacto">
+            <form>
+                <fieldset>
+                    <legend> Quien Soy </legend>
+                        <label class="labelContacto"> PEDRO JOSE ORELLANA </label>
+                        <label class="labelContacto"> Correo: <a href="mailto:porellanaj@est.ups.edu.ec"> 
+                        porellanaj@est.ups.edu.ec </a> </label>
+                        <label class="labelContacto"> Telefono: <a href="tel:+59398550859"> 
+                            0998550859 </a> </label>
+                            <label class="labelContacto"> UNIVERSIDAD POLITECNICA SALESIANA </label>
+                </fieldset>
+            </form>
+        </div>
+        <div id = "footerLocalizacion">
+            <iframe id = "localizacion"
+            src="https://maps.google.com/?ll=-2.886850,-78.989353&z=16&output=embed"></iframe>
+        </div>
+    </footer>
+    </body>   
+</html>

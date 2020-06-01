@@ -54,7 +54,7 @@
     echo "<br> <a href='modificarU.html?correo=". $correo ."'>Modificar Usuario</a> <br>";
     echo "<br> <a href='eliminarU.html?correo=". $correo ."'>Eliminar Usuario</a> <br>";
     echo "<br> <a href='cambiar_contrasenaU.html?correo=". $correo ."'>Cambiar Contraseña</a> <br>";
-    echo "<br> <a href='agregarT.html?correo=". $correo ."' >Agregar Telefono</a> <br>";
+    echo "<br> <a href='insertarT.html?correo=". $correo ."' >Agregar Telefono</a> <br>";
     echo "<br> <a href='modificarT.html?correo=". $correo ."'>Modificar Telefono</a> <br>";
     echo "<br> <a href='eliminarT.html?correo=". $correo ."'>Eliminar Telefono</a> <br>";
     echo "<br> <a href='buscarT.html?correo=". $correo ."'>Buscar Telefono</a> <br>";

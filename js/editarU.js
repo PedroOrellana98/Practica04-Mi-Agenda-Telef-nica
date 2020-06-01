@@ -174,7 +174,7 @@ function modificarT(){
 
 }
 
-function ingresarT(){
+function insertarT(){
 
     let params = new URLSearchParams(location.search);
     var correo = params.get('correo');
@@ -196,9 +196,38 @@ function ingresarT(){
             }
         };
 
-        xmlhttp.open("GET","../../controladores/user/ingresarT.php?correo="+correo+"&numero="+numero+"&tipo="+tipo+"&opera="+opera,true);
+        xmlhttp.open("GET","../../controladores/user/insertarT.php?correo="+correo+"&numero="+numero+"&tipo="+tipo+"&opera="+opera,true);
         xmlhttp.send();
 
+    }
+    return false;
+
+}
+
+function buscarT(){
+
+    let params = new URLSearchParams(location.search);
+    var correo = params.get('correo');
+    var numero = document.getElementById("txtNumero").value;
+
+    if (correo != ""){ 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //alert("llegue cedula");
+                document.getElementById("informacion").innerHTML = this.responseText;
+            }
+        };
+
+        xmlhttp.open("GET","../../controladores/user/buscarT.php?correo="+correo+"&numero="+numero,true);
+        xmlhttp.send();
+ 
     }
     return false;
 
@@ -416,7 +445,7 @@ function validar3(){
         boton1.disabled = false
     }else{
         alert("Revise sus campos");
-        location.href='agregarT.html';
+        location.href='insertarT.html';
     }
 
 }
