@@ -19,11 +19,13 @@
         $correo = $_GET['correo'];
         $numero = $_GET['numero'];
         $tipo = $_GET["tipo"];
-        $operadora = $_GET["opera"];
-        $result = $conn->query("SELECT codigo FROM usuario WHERE correo = $correo");
+        $operadora = $_GET["opera"];    
+        $sql1 = "SELECT codigo FROM usuario WHERE correo = '$correo'";
+        $result = $conn->query($sql1);
         while ($row = $result->fetch_assoc()) {
                 $id = $row['codigo'];
         }
+        echo($id);
         $sql = "INSERT INTO `telefono`(`codigo`, `numero`, `tipo`, `operadora`, `codigo_usuario`) VALUES (0,'$numero','$tipo','$operadora','$id')";
         if ($conn->query($sql) == TRUE) {
             header("Location: ../../../public/vista/login.html");
