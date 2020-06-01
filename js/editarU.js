@@ -2,6 +2,9 @@ var contN;
 var contA;
 var contC;
 var contI;
+var contN;
+var contT;
+var contO;
 
 function editarU() {
     let params = new URLSearchParams(location.search);
@@ -91,7 +94,6 @@ function modificarU(){
     var cedula = document.getElementById("txtCedula").value;
     var nombre = document.getElementById("txtNombre").value;
     var apellido = document.getElementById("txtApellido").value;
-    var correo = document.getElementById("txtCorreo").value;
 
     if (correo != ""){ 
         if (window.XMLHttpRequest) {
@@ -113,6 +115,78 @@ function modificarU(){
     }
     return false;
 
+}
+
+function modificarT(){
+
+    let params = new URLSearchParams(location.search);
+    var correo = params.get('correo');
+    var numero = document.getElementById("txtNumero").value;
+    var tipo = document.getElementById("txtTipo").value;
+    var opera = document.getElementById("txtOpera").value;
+
+    if (correo != ""){ 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //alert("llegue cedula");
+            }
+        };
+
+        xmlhttp.open("GET","../../controladores/user/modificarT.php?correo="+correo+"&numero="+numero+"&tipo="+tipo+"&opera="+opera,true);
+        xmlhttp.send();
+
+    }
+    return false;
+
+}
+
+function validarNumero(){
+    telefono = document.getElementById("txtNumero").value;
+
+    if (isNaN(telefono) || telefono.length > 10) {
+        document.getElementById('txtNumero').style.color = "red";
+        document.getElementById('mensajeNumero').innerHTML = "<br>Numero invalido"
+        contN = 0;
+    }else{
+        document.getElementById('txtNumero').style.color = "black";
+        document.getElementById('mensajeNumero').innerHTML = "<br hidden>"
+        contN = 1;
+    }
+}
+
+function validarTipo(){
+    tipo = document.getElementById("txtTipo").value;
+
+    if (isNaN(tipo) && tipo.length > 3)  {
+        document.getElementById('txtTipo').style.color = "black";
+        document.getElementById('mensajeTipo').innerHTML = "<br hidden>"
+        contT = 1;
+    }else{
+        document.getElementById('txtTipo').style.color = "red";
+        document.getElementById('mensajeTipo').innerHTML = "<br>Tipo invalido"
+        contT = 0;
+    }
+}
+
+function validarOperadora(){
+    opera = document.getElementById("txtOpera").value;
+
+    if (isNaN(opera) && opera.length > 3)  {
+        document.getElementById('txtOpera').style.color = "black";
+        document.getElementById('mensajeOpera').innerHTML = "<br hidden>"
+        contO = 1;
+    }else{
+        document.getElementById('txtOpera').style.color = "red";
+        document.getElementById('mensajeOpera').innerHTML = "<br>Operadora invalida"
+        contO = 0;
+    }
 }
 
 function validarCedula(){
@@ -230,6 +304,34 @@ function validar1(){
     }else{
         alert("Revise sus campos");
         location.href='modificarU.html';
+    }
+
+}
+
+function validar2(){
+
+    sum = contN+contT+contO;
+    telefono = document.getElementById("txtNumero").value;
+    tipo = document.getElementById("txtTipo").value;
+    opera = document.getElementById("txtOpera").value;
+
+    if (telefono.length < 1) {
+        alert("Campo Telefono vacio");
+    }
+    if (tipo.length < 1) {
+        alert("Campo Tipo vacio");
+    }
+    if (opera.length < 1) {
+        alert("Campo Operadora vacio");
+    }
+
+    if (sum == 3) {
+        boton = document.getElementById("botonContacto");
+        boton1 = document.getElementById("botonContacto1");
+        boton1.disabled = false
+    }else{
+        alert("Revise sus campos");
+        location.href='modificarT.html';
     }
 
 }
