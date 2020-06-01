@@ -41,7 +41,7 @@
             echo "   <td>" . $row['numero'] . "</td>";
             echo "   <td>" . $row['tipo'] . "</td>";
             echo "   <td>" . $row['operadora'] . "</td>";
-            echo "   <td> <a href='cambiar_contrasenaU.html?correo=" . $row['correo'] . "'>Cambiar Contraseña Usuario</a> </td>";                
+                            
             echo "</tr>";   
         }   
         
@@ -51,8 +51,9 @@
         echo "</tr>";     
     }
     echo "</table>";
-    echo "<br> <a href='modificarU.html'>Modificar Usuario</a> <br>";
+    echo "<br> <a href='modificarU.html?correo=". $correo ."'>Modificar Usuario</a> <br>";
     echo "<br> <a href='eliminarU.html?correo=". $correo ."'>Eliminar Usuario</a> <br>";
+    echo "<br> <a href='cambiar_contrasenaU.html?correo=". $correo ."'>Cambiar Contraseña</a> <br>";
     echo "<br> <a href='agregarU.html' >Agregar Telefono</a> <br>";
     echo "<br> <a href='modificarT.html'>Modificar Telefono</a> <br>";
     echo "<br> <a href='eliminarT.html'>Eliminar Telefono</a> <br>";

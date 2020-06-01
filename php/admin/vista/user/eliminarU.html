@@ -6,29 +6,28 @@
     <meta charset="UTF-8" />
     <meta name="keywords" content="Cuenta, Formulario" />
     <link href= "../../../../css/general.css" rel="stylesheet" type="text/css"/>
-    <link href= "../../../../css/admin.css" rel="stylesheet" type="text/css"/>
-    <body>
+    <link href= "../../../../css/user.css" rel="stylesheet" type="text/css"/>
+    <script src = "../../../../js/editarU.js"></script>
+    <body >
     <header>
-        <h1 id = "titulo"> DELETE USER </h1>
+        <h1 id = "titulo"> DELETE </h1>
         <img id="tituloImagen" src="../../../../images/cuenta.jpg" alt="cuenta">
         <input id ="tituloTexto" type="search" disabled>
     </header>
     <div class = "divNav">
         <nav class="navegar">
             <ul class = "list">
-                <li><a href= "editar.html">Editar </a></li>
+                <li><a href= "../../../public/vista/login.html">Log In </a></li>
                 <li><a href=#footerInfo>Contacto </a></li>
             </ul>
         </nav>
         </div>
     <section class="sectionContenido">
         <h2 hidden> CONTENIDO </h2>
-        <form id = "formulario" method = "POST" action = "../../controladores/admin/eliminar.php">
+        <form id = "formulario">
             <fieldset>
-                    <legend> DATOS DE ELIMINACION </legend>
-                    <label class="labelContacto"> CEDULA </label><br>
-                    <input type="text" id="txtCedula" name="cedula"><br>
-                    <input type = "submit" id = "botonContacto"  value="Eliminar">
+                    <legend> </legend>
+                    <input type = "submit" id = "botonContacto"  value="Eliminar" onclick="eliminarU()">
             </fieldset>
         </form>
     </section>

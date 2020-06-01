@@ -7,7 +7,7 @@
     <meta name="keywords" content="Cuenta, Formulario" />
     <link href= "../../../../css/general.css" rel="stylesheet" type="text/css"/>
     <link href= "../../../../css/admin.css" rel="stylesheet" type="text/css"/>
-    <script src = "../../../../js/validar.js"></script>
+    <script src = "../../../../js/editarU.js"></script>
     <body>
     <header>
         <h1 id = "titulo"> UPDATE USER </h1>
@@ -17,18 +17,16 @@
     <div class = "divNav">
         <nav class="navegar">
             <ul class = "list">
-                <li><a href= "editar.html">Editar </a></li>
+                <li><a href= "../../../public/vista/login.html">Log In </a></li>
                 <li><a href=#footerInfo>Contacto </a></li>
             </ul>
         </nav>
         </div>
     <section class="sectionContenido">
         <h2 hidden> CONTENIDO </h2>
-        <form id = "formulario" method = "POST" action = "../../controladores/admin/modificar.php">
+        <form id = "formulario">
             <fieldset>
                     <legend> DATOS DE MODIFICACION </legend>
-                    <label class="labelContacto"> CODIGO* </label><br>
-                    <input type="text" id="txtCodigo" name="codigo"><br>
                     <label class="labelContacto"> CEDULA* </label><br>
                     <input type="text" id="txtCedula" name="cedula" onchange="validarCedula()"><br>
                     <span id="mensajeCedula"></span><br>
@@ -41,20 +39,8 @@
                     <label class="labelContacto"> CORREO ELECTRONICO* </label><br>
                     <input type="text" id="txtCorreo" name="correo" onkeyup="validarCorreo()"><br>
                     <span id="mensajeCorreo"></span><br>
-                    <label class="labelContacto"> CONTRASEÑA* </label><br>
-                    <input type="text" id="txtContra" name="contraseña" onchange="validarContraseña()"><br>
-                    <span id="mensajeContra"></span><br>
-                    <label class="labelContacto"> NUMERO* </label><br>
-                    <input type="text" id="txtNumero" name="numero" onchange="validarNumero()"><br>
-                    <span id="mensajeNumero"></span><br>
-                    <label class="labelContacto"> TIPO* </label><br>
-                    <input type="text" id="txtTipo" name="tipo" onchange="validarTipo()"><br>
-                    <span id="mensajeTipo"></span><br>
-                    <label class="labelContacto"> OPERADORA* </label><br>
-                    <input type="text" id="txtOpera" name="operadora" onchange="validarOperadora()"><br>
-                    <span id="mensajeOpera"></span><br>
-                    <input type = "button" id = "botonContacto"  value="Validar" onclick="validarForm();">
-                    <input type = "submit" id = "botonContacto1"  value="Modificar"  name = "modificar" disabled>
+                    <input type = "button" id = "botonContacto"  value="Validar" onclick="validar1()">
+                    <input type = "submit" id = "botonContacto1"  value="Modificar"  name = "modificar" disabled onclick="modificarU()">
             </fieldset>
         </form>
     </section>
